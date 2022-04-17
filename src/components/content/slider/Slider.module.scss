@@ -1,0 +1,30 @@
+.wrap{
+  width: 445px;
+  height: 565px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  .bigImg{
+    width: 100%;
+    height: 445px;
+    border-radius: 15px;
+    object-fit: cover;
+
+  }
+  .collectionImg{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .smallImgWrap{
+      .smallImg{
+        width: 88px;
+        height: 88px;
+        object-fit: cover;
+        border-radius: 10px;
+
+      }
+    }
+  }
+}

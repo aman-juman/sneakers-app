@@ -1,0 +1,167 @@
+@import "../../../styles/variables";
+.wrap{
+  display: flex;
+  position: static;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 445px;
+  height: 425px;
+
+  .companyName {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 2px;
+    color: $orange;
+    text-transform: uppercase;
+  }
+
+  .title{
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 48px;
+    color: $black;
+  }
+  .desc{
+    font-size: 16px;
+    line-height: 26px;
+    color: $grayLight;
+    font-weight: 400;
+  }
+
+  .priceBlock{
+    width: 175px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+
+    .mainPriceSection{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      .currentPrice{
+        font-size: 28px;
+        line-height: 28px;
+        color: $black;
+        font-weight: 700;
+      }
+      .discount{
+        width: 50px;
+        height: 27px;
+        background-color: $orangeLight;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        border-right: 6px;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 700;
+        color: $orange;
+      }
+    }
+    .oldPrice{
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 700;
+      color: $gray;
+      text-decoration: line-through;
+    }
+  }
+
+  .btnWrap{
+    width: 445px;
+    display: flex;
+    justify-content: space-between;
+    .quantityWrap{
+      width: 160px;
+      height: 55px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color:$paleGray;
+      border-radius: 10px;
+      .incrementBtn{
+        height: 100%;
+        width: 50px;
+        color: $orange;
+        font-size: 22px;
+        line-height: 1;
+        font-weight: 700;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: transparent;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        transition: all 0.2s ease-in;
+        &:hover{
+          background-color: $gray;
+          color: $white;
+        }
+        &:active{
+          background-color: $grayLight
+        }
+
+      }
+      .quantity{
+        font-size: 16px;
+        color: $black;
+        font-weight: 700;
+
+      }
+      .decrementBtn{
+        height: 100%;
+        width: 50px;
+        color: $orange;
+        font-size: 16px;
+        line-height: 1;
+        font-weight: 700;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: transparent;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transition: all 0.2s ease-in;
+        &:hover{
+          background-color: $gray;
+          color: $white;
+        }
+        &:active{
+          background-color: $grayLight
+        }
+
+      }
+    }
+    .addBtn{
+      width: 270px;
+      height: 55px;
+      background-color: $orange;
+      border: none;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      font-size: 16px;
+      font-weight: 700;
+      transition: all 0.2s ease-in;
+      cursor: pointer;
+      &:hover{
+        background-color: $paleOrange;
+        color: $white;
+      }
+      &:active{
+        background-color: $orangeLight
+      }
+    }
+  }
+
+
+}

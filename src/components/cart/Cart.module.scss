@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+.wrap{
+  position: absolute;
+  top: 45px;
+  right: -160px;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.503143);
+  z-index: 1;
+
+.cart{
+  padding: 25px;
+  position: relative;
+
+  &::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-top: 2px solid $grayHighLight;
+    top: 65px;
+    left: 0;
+  }
+  .title{
+    color: $black;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+
+  .btn{
+    width: 100%;
+    height: 55px;
+    color: $white;
+    font-weight: 700;
+    line-height: 20px;
+    background-color: $orange;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover{
+      background-color: $paleOrange;
+    }
+
+
+  }
+}
+}
