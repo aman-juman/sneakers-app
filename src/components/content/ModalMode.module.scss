@@ -1,0 +1,57 @@
+@import "../../styles/variables";
+.wrapp{
+  position: fixed;
+  background-color: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  .content{
+    width: 550px;
+    height: 680px;
+    position: relative;
+    .closeImg{
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      color: $white;
+      top: -40px;
+      right: 0;
+    }
+    .prevImg{
+      position: absolute;
+      top: 40%;
+      left: -27px;
+      width: 55px;
+      height: 55px;
+      background-color: $white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+    }
+    .nextImg{
+      position: absolute;
+      top: 40%;
+      right: -27px;
+      width: 55px;
+      height: 55px;
+      background-color: $white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+    }
+  }
+}
+
+
