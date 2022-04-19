@@ -1,4 +1,5 @@
 @import "../../../styles/variables";
+@import "../../../styles/globals";
 .wrap{
   width: 100%;
   height: 100%;
@@ -7,6 +8,12 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  @include medium{
+    margin-bottom: 10px;
+  }
+  @include mobile{
+
+  }
   .bigImg{
     width: 100%;
     height: 100%;
@@ -15,6 +22,10 @@
     object-fit: cover;
     cursor: pointer;
 
+    @include mobile{
+      margin: 0;
+    }
+
   }
   .collectionImg{
     width: 100%;
@@ -22,6 +33,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include mobile{
+      display: none;
+    }
     .smallImgWrap{
       .smallImg{
         width: 88px;

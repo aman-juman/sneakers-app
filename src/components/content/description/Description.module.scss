@@ -1,12 +1,22 @@
 @import "../../../styles/variables";
+@import "../../../styles/globals";
 .wrap{
   display: flex;
+  margin: 50px;
   position: static;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  width: 445px;
-  height: 425px;
+  max-width: 445px;
+  //width: 100%;
+  max-height: 425px;
+  //height: 100%;
+  @include medium{
+    margin: 0 auto;
+  }
+  @include mobile{
+    margin: 30px;
+  }
 
   .companyName {
     font-size: 13px;
@@ -71,17 +81,28 @@
   }
 
   .btnWrap{
-    width: 445px;
+    max-width: 445px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+
+    @include mobile{
+      flex-direction: column;
+      align-items: center;
+    }
     .quantityWrap{
-      width: 160px;
+      max-width: 160px;
+      width: 100%;
       height: 55px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color:$paleGray;
       border-radius: 10px;
+      @include mobile{
+        max-width: 100%;
+        margin-bottom: 15px;
+      }
       .incrementBtn{
         height: 100%;
         width: 50px;
@@ -140,7 +161,8 @@
       }
     }
     .addBtn{
-      width: 270px;
+      max-width: 270px;
+      width: 100%;
       height: 55px;
       background-color: $orange;
       border: none;
@@ -153,6 +175,9 @@
       font-weight: 700;
       transition: all 0.2s ease-in;
       cursor: pointer;
+      @include mobile{
+        max-width: 100%;
+      }
       &:hover{
         background-color: $paleOrange;
         color: $white;

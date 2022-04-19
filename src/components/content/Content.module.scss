@@ -1,11 +1,19 @@
+@import "../../styles/globals";
 .wrap{
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 50px;
+  @include medium{
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
+  }
   .sliderSize{
-    width: 445px;
-    height: 565px;
+    max-width: 445px;
+    @include medium{
+      width: 100%;
+    }
   }
 }
 

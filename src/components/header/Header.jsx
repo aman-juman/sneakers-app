@@ -3,6 +3,7 @@ import basketImg from "../../assets/images/icon-cart.svg";
 import avatarImg from "../../assets/images/image-avatar.png";
 import styles from "./Header.module.scss";
 import Cart from "../cart/Cart";
+import menuPrimary from "../../assets/images/icon-menu.svg";
 
 function Header(props) {
     const [cartShow, setCartShow] = useState(false);
@@ -10,8 +11,9 @@ function Header(props) {
         <header className="container">
             <div className={styles.wrap}>
                 <div className={styles.leftBlock}>
+                    <img className={styles.menu} src={menuPrimary} alt="menu"/>
                     <h1 className={styles.logo}>sneakers</h1>
-                    <nav>
+                    <nav className={styles.nav}>
                         <ul className={styles.navLists}>
                             <li className={styles.navItem}>Collections</li>
                             <li className={styles.navItem}>Men</li>
