@@ -41,16 +41,16 @@ function App() {
             setMode={setMode}
         />}
 
-      {/*<Content*/}
-      {/*    currentBigImg={currentBigImg}*/}
-      {/*    currentSmallImg={currentSmallImg}*/}
-      {/*    setCurrentBigImg={setCurrentBigImg}*/}
-      {/*    setCurrentSmallImg={setCurrentSmallImg}*/}
-      {/*    onChangeImage={onChangeImage}*/}
-      {/*    smallImages={smallImages}*/}
-      {/*    setMode={setMode}*/}
+      <Content
+          currentBigImg={currentBigImg}
+          currentSmallImg={currentSmallImg}
+          setCurrentBigImg={setCurrentBigImg}
+          setCurrentSmallImg={setCurrentSmallImg}
+          onChangeImage={onChangeImage}
+          smallImages={smallImages}
+          setMode={setMode}
 
-      {/*/>*/}
+      />
     </div>
   );
 }
