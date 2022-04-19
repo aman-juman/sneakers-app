@@ -1,0 +1,34 @@
+@import "../../../styles/globals";
+@import "../../../styles/variables";
+.nav{
+  margin: 0 40px;
+  @include medium{
+    //display: none;
+  }
+
+  .navLists{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    color: $grayLight;
+    font-size: 15px;
+
+    .navItem{
+      margin: 0 15px;
+      cursor: pointer;
+      position: relative;
+      &:hover{
+        color: $black;
+      }
+      &:hover::after{
+        content: "";
+        border-bottom: 4px solid $orange;
+        width: 100%;
+        position: absolute;
+        bottom: -45px;
+        left: 0;
+      }
+    }
+
+  }
+}
