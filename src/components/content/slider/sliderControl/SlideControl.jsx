@@ -8,8 +8,8 @@ function SlideControl({handleSlide}) {
 
     return (
         <>
-            <div onClick={e=> handleSlide(e, 'prev')} className={styles.prevImg}><img alt="" src={prevImg}/></div>
-            <div onClick={e=> handleSlide(e, 'next')} className={styles.nextImg}><img alt="" src={nextImg} /></div>
+            <div onClick={e=> handleSlide('prev')} className={styles.prevImg}><img alt="" src={prevImg}/></div>
+            <div onClick={e=> handleSlide('next')} className={styles.nextImg}><img alt="" src={nextImg} /></div>
         </>
     );
 }
