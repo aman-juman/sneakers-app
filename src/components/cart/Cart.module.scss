@@ -32,6 +32,14 @@
     top: 65px;
     left: 0;
   }
+  .empty{
+    width: 312px;
+    height: 150px;
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .title{
     color: $black;
     font-weight: 700;

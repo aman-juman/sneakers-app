@@ -6,11 +6,16 @@ import Cart from "../cart/Cart";
 import menuPrimary from "../../assets/images/icon-menu.svg";
 import menuSecondary from "../../assets/images/icon-close.svg";
 import cn from "classnames";
+import {useSelector} from "react-redux";
 
 
 function Header() {
     const [cartShow, setCartShow] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+
+    const cart = useSelector(state => state.cart);
+
+
     return (
         <header className="container">
             <div className={styles.wrap}>
@@ -50,9 +55,9 @@ function Header() {
 
                 <div className={styles.rightBlock}>
                     <div className={styles.basketWrap} onClick={() => setCartShow(prev => !prev)} >
-                        {cartShow &&   <Cart />}
+                        {cartShow &&    <Cart products={cart.products}/>}
                         <img className={styles.basketImg} src={basketImg} alt="basket"/>
-                        <span className={styles.basketQuantity}>3</span>
+                        <span className={styles.basketQuantity}>{cart.totalQuantity}</span>
                     </div>
                     <img className={styles.avatarImg} src={avatarImg} alt="avatar"/>
                 </div>
