@@ -3,10 +3,7 @@ import styles from "./Slider.module.scss";
 import cn from "classnames";
 
 
-function Slider(props) {
-    const {onChangeImage, currentBigImg, currentSmallImg, setCurrentBigImg, setCurrentSmallImg, setMode, smallImages} = props.props;
-
-
+function Slider({bigImages, smallImages, indexCurImg, setIndexCurImg, setMode}) {
     return (
         <div
             onClick={e => e.stopPropagation()}
@@ -15,19 +12,19 @@ function Slider(props) {
                 <img
                     onClick={() => setMode(true)}
                     className={styles.bigImg}
-                    src={currentBigImg}
+                    src={bigImages[indexCurImg]}
                     alt="Product"/>
             </div>
             <div className={styles.collectionImg}>
                 {smallImages.map((img, i) => (
-                    <div key={i} onClick={(e) => onChangeImage(e, i)} className={styles.smallImgWrap}>
+                    <div key={i} onClick={() => setIndexCurImg(i)} className={styles.smallImgWrap}>
                         <img
                             className={cn(styles.smallImg, {
-                                [styles.active]: currentSmallImg === i
+                                [styles.active]: indexCurImg === i
                             })}
                             src={img}
                             alt="Product"
-                            onClick={() => setCurrentSmallImg(i)}
+                            onClick={() => setIndexCurImg(i)}
                         />
                     </div>
                 ))}

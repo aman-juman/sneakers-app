@@ -11,6 +11,7 @@
   }
   .sliderSize{
     max-width: 445px;
+    position: relative;
     @include medium{
       width: 100%;
     }

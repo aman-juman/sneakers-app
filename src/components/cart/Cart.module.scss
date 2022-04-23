@@ -1,6 +1,8 @@
+@import '../../styles/globals';
 @import '../../styles/variables';
 .wrap{
   position: absolute;
+  max-width: 360px;
   top: 45px;
   right: -160px;
   display: flex;
@@ -9,10 +11,18 @@
   border-radius: 10px;
   box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.503143);
   z-index: 1;
+  @include mobile{
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
 
 .cart{
   padding: 25px;
   position: relative;
+
 
   &::before{
     content: "";

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./Nav.module.scss";
 
-function Nav(props) {
+function Nav() {
     return (
         <nav className={styles.nav}>
             <ul className={styles.navLists}>

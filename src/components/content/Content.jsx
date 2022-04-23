@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from "./Content.module.scss";
-import Slider from "./slider/Slider";
 import Description from "./description/Description";
+import SliderContainer from "./slider/SliderContainer";
 
-function Content(props) {
+function Content({setMode}) {
 
     return (
         <div className="container">
             <div className={styles.wrap}>
                 <div className={styles.sliderSize}>
-                    <Slider props={props}/>
+                    <SliderContainer setMode={setMode} />
                 </div>
                 <Description />
             </div>

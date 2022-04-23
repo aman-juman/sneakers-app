@@ -2,6 +2,7 @@
 @import "../../../styles/variables";
 .nav{
   margin: 0 40px;
+  background-color: blueviolet;
   @include medium{
     //display: none;
   }

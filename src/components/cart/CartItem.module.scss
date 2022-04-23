@@ -1,11 +1,19 @@
 @import '../../styles/variables';
+@import '../../styles/globals';
 .wrap{
-  width: 360px;
+  width: 312px;
   height: 50px;
   margin: 25px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include mobile{
+    max-width: 312px;
+    width: 100%;
+    max-height: 100px;
+    height: 100%;
+    margin: 0;
+  }
 
   .productImg{
     width: 50px;
@@ -15,7 +23,7 @@
   }
   .content{
     max-width: 290px;
-    height: 50px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     color: $grayLight;

@@ -6,20 +6,21 @@ import Cart from "../cart/Cart";
 import menuPrimary from "../../assets/images/icon-menu.svg";
 import menuSecondary from "../../assets/images/icon-close.svg";
 import cn from "classnames";
-import Nav from "./nav/Nav";
 
 
-function Header(props) {
+function Header() {
     const [cartShow, setCartShow] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     return (
         <header className="container">
             <div className={styles.wrap}>
-                <div className={cn(styles.menuBackgroundWrap, {
+                <div
+                    onClick={() => setMenuOpen(false)}
+                    className={cn(styles.menuBackgroundWrap, {
                     [styles.menuOpen] : menuOpen
                 })}>
                     <div className={styles.menuBackground}>
-                        <ul className={styles.navLists}>
+                        <ul className={styles.navListsOpenMenu}>
                             <li className={styles.navItem}>Collections</li>
                             <li className={styles.navItem}>Men</li>
                             <li className={styles.navItem}>Women</li>
