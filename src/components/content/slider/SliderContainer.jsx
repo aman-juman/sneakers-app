@@ -1,18 +1,19 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {bigImages, smallImages} from "../../../components/data";
 import SlideControl from "./sliderControl/SlideControl";
 import Slider from "./Slider";
+import {useDispatch, useSelector} from "react-redux";
+import {setIndexImage} from "../../../features/productImageCurrent";
 
 function SliderContainer({mode, setMode}) {
-    const [indexCurImg, setIndexCurImg] = useState(0);
-    const handleSlide = (e, direction) =>{
+    const {index} = useSelector(state => state.imageIndex);
+    const dispatch = useDispatch();
+    const handleSlide = direction =>{
         if(direction === 'next'){
-            console.log('nEXT')
-            indexCurImg < bigImages.length -1  && setIndexCurImg(prev => prev + 1)
+            index < bigImages.length -1  && dispatch(setIndexImage(index + 1))
         }
         else if(direction === 'prev'){
-            console.log('pRev')
-            0 < indexCurImg && setIndexCurImg(prev => prev - 1)
+            0 < index && dispatch(setIndexImage(index - 1))
         }
     };
     return (
@@ -21,8 +22,6 @@ function SliderContainer({mode, setMode}) {
             <Slider
                 bigImages={bigImages}
                 smallImages={smallImages}
-                indexCurImg={indexCurImg}
-                setIndexCurImg={setIndexCurImg}
                 setMode={setMode}
             />
 
